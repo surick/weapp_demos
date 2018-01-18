@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="bookcase-box">
+    <view class="bookcase-item" bindtap="skip" data-bookid="{{index}}" wx:for="{{bookcase}}" wx:key="index">
+      <image class="cover" src="{{item.cover}}"></image>
+      <view class="book-content">
+        <text class="title">{{item.title}}<text class="book-new" wx:if="{{item.isUpdate}}">更新</text></text>
+        <text class="content"><text class="text-hint">{{item.updated}}</text>  {{item.lastChapter}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="book-add" bindtap="toSearch">
+    <image class="add-btn" src="../../static/image/add.png" background-size="cover"></image>
+    <text class="user-motto">添加您喜欢的小说</text>
+  </view>
+</view>
+<view class="footer">
+  <text>仅供本人测试学习使用,如有版权问题请立即联系godcoder1996@gmail.com删           除！     
+  </text>
+</view>
